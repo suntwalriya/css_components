@@ -1,0 +1,353 @@
+/* --xiketic: #1a1423ff;
+--english-violet: #3d314aff;
+--eggplant: #684756ff;
+--ivory: #f2f5eaff;
+--baby-pink: #f3c5c5ff; */
+
+* {
+  font-family: system-ui;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-container: #1A1423;
+  --bg-main: #3d314aff;
+  --bg-card: #f2f5eaff;
+  --accent-color: #f3c5c5ff;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ********Cards******* */
+.container {
+    display: grid;
+    background-color: var(--bg-container);
+    color: #f2f5eaff;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "content content content"
+      "footer footer footer";
+  
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    /* height: 100vh; */
+  }
+
+  header {
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  h1 {
+    align-self: center;
+  }
+  
+  h2 {
+    align-self: center;
+  }
+
+  nav {
+    grid-area: nav;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .nav-button {
+    margin: 1rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    border-radius: 20%;
+    cursor: pointer;
+    border: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  main {
+    grid-area: content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--bg-main);
+    padding: 2rem;
+  }
+
+  .card-container {
+    max-width: 21.9rem;
+    background-color: var(--bg-card);
+    color: var(--bg-container);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .img-card {
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-bottom {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .card-bottom-btn {
+    border: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: var(--bg-container);
+    margin: 0.2rem;
+    cursor: pointer;
+  }
+
+  small {
+    margin: 0;
+  }
+
+  .button-icons {
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  footer {
+    grid-area: footer;
+    background-color: var(--bg-container);
+    text-align: center;
+    padding: .5rem;
+  }
+
+  /**********Normal Chips**********/
+  .container-chips {
+    margin: 4rem;
+    gap: 2rem;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .chip {
+    border-radius: 2.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  .chip-normal {
+    background-color: #e0e0e0;
+    color: black;
+  }
+
+  .chip-primary {
+    background-color: #3f51b5;
+    color: black;
+   }
+
+   .chip-warning {
+     background-color: red;
+     color: black;
+   }
+
+   .chip-accent-fish {
+     background-color: #ff4081;
+     color: white;
+   }
+
+   /* ***********Chips with Icon************ */
+  
+   .chip .icon {
+    margin-right: 0.5rem;
+  }
+   .chip-html {
+    background-color: hsla(11, 100%, 52.2%, 1);
+    color: white;
+   }
+
+   .chip-css {
+    background-color: #3333ed;
+    color: white;
+   }
+
+   .chip-js {
+    background-color: #f5f111;
+    color: black;
+   }
+
+   .chip .close {
+    margin-left: 0.5rem;
+    color: black;
+    cursor: pointer;
+   }
+
+   .chip-node {
+    background-color: #11a111;
+    color: white;
+   }
+
+   /* **************Drawer************* */
+
+   /* ************Header************** */
+
+   .container-header {
+    gap: 30px;
+    margin: 4rem;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    font-family: "Roboto", sans-serif;
+   }
+
+   .header-standard {
+    display: flex;
+    background-color: #6200ee;
+    color: white;
+    padding: 2rem;
+    font-size: 2rem;
+   }
+
+   .header-standard .header-start span {
+    margin-left: 1.5rem;
+   }
+
+   .header-standard button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+   }
+
+   .header-standard .header-end {
+    margin-left: auto;
+    display: flex;
+    min-width: 200px;
+    justify-content: space-around;
+   }
+
+   /* ************Badge*********** */
+
+   .container-badge {
+    gap: 30px;
+    margin: 4rem;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    font-family: "Roboto", sans-serif;
+   }
+
+   .position-relative {
+    position: relative;
+    display: inline-block;
+   }
+
+   .badge {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: white;
+    background-color: tomato;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+   }
+   
+   .b-w-b-l .badge {
+    top: -15px;
+    left: -10px;
+   }
+
+   .b-w-b-l button {
+    border: none;
+    background-color: blue;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+   }
+
+   .i-w-b-r .badge {
+    right: -20px;
+    bottom: 35px;
+   }
+
+   .i-w-b-r button {
+    font-size: 2.5rem;
+    border: none;
+    background: transparent;
+   }
+
+   .t-w-b-r .badge {
+    right: -35px;
+    bottom: 20px;
+   }
+
+   .t-w-b-r p {
+    font-size: 2rem;
+    font-weight: 500;
+   }
+
+   /* ******Snackbar************ */
+
+   .container-snackbar {
+    gap: 30px;
+    margin: 4rem;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    font-family: "Roboto", sans-serif;
+   }
+
+   .snackbar {
+    background-color: #333;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--COLOR-SLATE-400);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+    flex-wrap: wrap;
+   }
+
+   .snackbar-label {
+    margin-right: 2rem;
+   }
+
+   .snackbar-action {
+    justify-content: space-between;
+   }
+
+   .snackbar .snackbar-action button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+   }
+
+   .snackbar .snackbar-action .snackbar-action-button {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--accent-color);
+   }
+
+   .snackbar .snackbar-action .snackbar-close {
+    color: white;
+   }
