@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>Document</title>
 </head>
 <body>
@@ -25,17 +25,32 @@
           <a href="tabs.html"><button class="nav-button">Tabs</button></a>
         </nav>
         <main>
-            <div class="container-snackbar flex">
-                <div class="snackbar flex">
-                  <section class="snackbar-label">
-                    <span>Can't send photo. Retry in 5 seconds.</span>
-                  </section>
-                  <div class="snackbar-action flex">
-                    <button class="snackbar-action-button">Retry</button>
-                    <button class="snackbar-close">
-                      <i class="fas fa-times" aria-hidden="true"></i>
-                    </button>
+            <div class="container-dialog flex">
+                <div class="dialog dialog-alert">
+                  <h1 class="dialog-header">Dialog Header</h1>
+                  <p class="dialog-content">Dialog body text</p>
+                  <div class="dialog-footer flex">
+                    <button>Action 1</button>
+                    <button>Action 2</button>
                   </div>
+                </div>
+          
+                <div class="dialog dialog-simple">
+                  <h1 class="dialog-header">Dialog Header</h1>
+                  <ul class="dialog-content">
+                    <li class="d-s-content flex">
+                      <i class="avtar-d-s fas fa-user-circle" aria-hidden="true"></i>
+                      <p>Item 1</p>
+                    </li>
+                    <li class="d-s-content flex">
+                      <i class="avtar-d-s fas fa-user-circle" aria-hidden="true"></i>
+                      <p>Item 2</p>
+                    </li>
+                    <li class="d-s-content flex">
+                      <i class="avtar-d-s fas fa-user-circle" aria-hidden="true"></i>
+                      <p>Item 3</p>
+                    </li>
+                  </ul>
                 </div>
               </div>
         </main>
